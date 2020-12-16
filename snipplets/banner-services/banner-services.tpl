@@ -22,16 +22,7 @@
 {% endmacro %}
 {% import _self as banner_services %}
 {% if settings.banner_services %}
-    <section class="section-informative-banners" data-store="banner-services">
-        <div class="container">
-            <div class="row">
-                <div class="js-informative-banners swiper-container">
-                    <div class="swiper-wrapper">
-                        {{ banner_services.for_each_banner_include('snipplets/banner-services/banner-services-item.tpl') }}
-                    </div>
-                    <div class="js-informative-banners-pagination service-pagination swiper-pagination swiper-pagination-black"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="text-center banner-diferenciais">
+		<img src="{{ 'images/vantagens.png' | static_url }}" class="icon-logo lazyload">
+</section>
 {% endif %}

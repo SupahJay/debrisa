@@ -6,7 +6,6 @@
             <div class="row justify-content-center">
                 <div class="col-md-8 col-lg-6 text-center">
                     <div class="js-newsletter newsletter">
-                        <div class="mb-4 text-uppercase">{{ 'Newsletter' | translate }}</div>
                         {% if settings.news_title %}
                             <h3 class="h1 mb-4">{{ settings.news_title }}</h3>
                         {% endif %}

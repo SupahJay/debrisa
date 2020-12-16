@@ -3,6 +3,7 @@
 
 {% set has_footer_menu = settings.footer_menu and settings.footer_menu_show %}
 {% set has_footer_menu_secondary = settings.footer_menu_secondary and settings.footer_menu_secondary_show %}
+{% set has_footer_menu_third = settings.footer_menu_third and settings.footer_menu_third_show %}
 {% set has_footer_about = settings.footer_about_show and (settings.footer_about_title or settings.footer_about_description) %}
 {% set has_payment_logos = settings.payments %}
 {% set has_shipping_logos = settings.shipping %}
@@ -49,6 +50,14 @@
 						{% include "snipplets/navigation/navigation-foot-secondary.tpl" %}
 					</div>
 				{% endif %}
+				{% if has_footer_menu_secondary %}
+					<div class="col">
+						{% if settings.footer_menu_third_title %}
+							<h4 class="h3">{{ settings.footer_menu_third_title }}</h4>
+						{% endif %}
+						{% include "snipplets/navigation/navigation-foot-third.tpl" %}
+					</div>
+				{% endif %}
 
 				{# Contact info #}
 				{% if has_footer_contact_info %}
@@ -59,11 +68,19 @@
 						{% include "snipplets/contact-links.tpl" %}
 					</div>
 				{% endif %}
-{% include "snipplets/navigation/ajuda-e-suporte.tpl" %}
+
 			{% endif %}
 			
+			{# Imagens #}
+			<div class="col-md mb-4">
+				<img src="{{ 'images/simple-footer.png' | static_url }}" />
+			</div>
+
+
+
+			
 			{# Social #}
-	 		{% if has_social_network %}
+	 		{% if has_social_network and false %}
 
 				<div class="col-md mb-4{% if template == 'password' %} text-center{% endif %}">
 					{% if settings.footer_social_title %}
@@ -171,7 +188,13 @@
 
 		{% endif %}
 	</div>
-	<div class="footer-legal">
+	<div class="footer-lega text-center">
+
+
+	<img src="{{ 'images/stg.png' | static_url }}" />
+	
+	
+	{% if false %}
 		<div class="container-fluid px-md-5">
 			<div class="row">
 			
@@ -197,5 +220,6 @@
 	            
 	        </div>
     	</div>
+	{% endif %}
     </div>
 </footer>

@@ -7,4 +7,5 @@
 </script>
 <script id="style-css">
     loadCSS( '{{ 'css/style-async.scss.tpl' | static_url }}', document.getElementById("style-css"));
+    loadCSS( '{{ 'css/style-custom.scss.tpl' | static_url }}', document.getElementById("style-css"));
 </script>

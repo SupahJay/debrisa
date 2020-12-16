@@ -19,13 +19,23 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col text-left d-none d-md-block">
-                        {% include "snipplets/social/social-links.tpl" %}
+                        <ul class="js-subutility-list subutility-list">
+                            {% if store.whatsapp %}
+                                <li class="subutility-list-item"><a href="{{ store.whatsapp }}" class="contact-link">{% include "snipplets/svg/whatsapp.tpl" with {svg_custom_class: "icon-inline icon-md mr-1"} %} {{ store.whatsapp |trim('https://wa.me/') }}</a></li>
+                            {% elseif store.phone %}
+                                <li class="subutility-list-item"><a href="tel:{{ store.phone }}" class="contact-link">{% include "snipplets/svg/phone.tpl" with {svg_custom_class: "icon-inline icon-md mr-1"} %} {{ store.phone }}</a></li>
+                            {% endif %}
+                            {% if store.email %}
+                                <li class="subutility-list-item"><a href="mailto:{{ store.email }}" class="contact-link">{% include "snipplets/svg/email.tpl" with {svg_custom_class: "icon-inline icon-md mr-1"} %} {{ store.email }}</a></li>
+                            {% endif %}
+                        </ul>
+                        {% include "snipplets/navigation/navigation-lang.tpl" %}
                     </div>
                     {% if has_ad_bar %}
                         {% snipplet "header/header-advertising.tpl" %}
                     {% endif %}
                     <div class="col text-right d-none d-md-block">
-                        {% include "snipplets/navigation/navigation-lang.tpl" %}
+                        {% include "snipplets/social/social-links.tpl" %}
                     </div>
                 </div>
             </div>
@@ -44,10 +54,10 @@
                 </a>
                 {% endif %}
             </div>
-			<div class="col-8 col-md-4 col-md-3 col-lg-3 text-center text-md-left">{% snipplet "header/header-logo.tpl" %}</div>
-            <div class="{% if settings.head_utility == 'searchbox' %}col-12 col-md-5 col-md-5 col-lg-6 order-last order-md-0 {% else %}col-6 d-none d-md-block{% endif %} text-center">
+            <div class="{% if settings.head_utility == 'searchbox' %}col-12 col-md-5 col-md-5 col-lg-3 order-last order-md-0 {% else %}col-6 d-none d-md-block{% endif %} text-center">
                 {% snipplet "header/header-search.tpl" %}
             </div>
+			<div class="col-8 col-md-4 col-md-3 col-lg-6 text-center text-md-left">{% snipplet "header/header-logo.tpl" %}</div>
 			<div class="col-2 col-md-3 col-md-4 col-lg-3 text-right ">
                 {% snipplet "header/header-utilities.tpl" %}
                 {% if settings.head_fix and settings.ajax_cart %}

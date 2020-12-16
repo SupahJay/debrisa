@@ -823,6 +823,17 @@ Pie de página
 		name = footer_menu_secondary_title
 		description = Título
 	title
+		title = Menú third
+	checkbox
+		name = footer_menu_third_show
+		description = Mostrar menú
+	menu
+		name = footer_menu_third
+		description = ¿Qué menú vas a mostrar al final de la página?
+	i18n_input
+		name = footer_menu_third_title
+		description = Título
+	title
 		title = Datos de contacto
 	checkbox
 		name = footer_contact_show
@@ -830,6 +841,9 @@ Pie de página
 	i18n_input
 		name = footer_contact_title
 		description = Título
+	i18n_input
+		name = footer_contact_title_teste
+		description = Conteúdo
 	title
 		title = Redes sociales
 	i18n_input

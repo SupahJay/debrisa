@@ -1,3 +1,8 @@
+
+<div class="banner-innterna">
+	<img class="img-fluid w-100" src="{{ 'images/banner-interna.png' | static_url }}" />
+</div>
+
 {% embed "snipplets/page-header.tpl" %}
 	{% block page_header_text %}{{ page.name }}{% endblock page_header_text %}
 {% endembed %}

@@ -3907,6 +3907,10 @@ es "Menú secundario"
 pt "Menu secundário"
 es_mx "Menú secundario"
 
+es "Menú third"
+pt "Terceiro Menu"
+es_mx "Terceiro Menu"
+
 es "Sobre nosotros"
 pt "Sobre nós"
 es_mx "Sobre nosotros"
