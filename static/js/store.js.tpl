@@ -818,11 +818,11 @@ $(document).ready(function(){
         $.instagramFeed({
             'username': '{{ instuser }}',
             'container': '#instafeed',
-            'item_class': 'col-4 col-md-2',
+            'item_class': 'col',
             'image_class': 'instafeed-img w-100 fade-in',
             'private_class': 'col text-center',
             'image_size': resolution,
-            'items': 6,
+            'items': 5,
             'likes': {% if settings.instafeed_like %}true{% else %}false{% endif %},
             'like_icon': '{% include "snipplets/svg/heart.tpl" with {svg_custom_class: "icon-inline svg-icon-invert"} %}'
         });

@@ -1202,7 +1202,6 @@ footer {
 .section-video-home,
 .section-featured-home,
 .section-brands-home,
-.section-newsletter-home,
 .section-instafeed-home {
   @extend %section-margin;
 }

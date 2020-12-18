@@ -16,12 +16,15 @@
         </div>
     {% endif %}
 
-        <div class="container-fluid">
-            <div class="row">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
                 <div class="col-4 col-md-2">
                 {% set instuser = store.instagram|split('/')|last %}
-                    <a target="_blank" href="{{ store.instagram }}" class="instafeed-title"><h3 class="instafeed-user">@{{ instuser }}</h3></a>
-                    <h4 class="sub-title">Siga-nos no Instagram</h4>
+                
+                    <div class="insta-titles">
+                        <a target="_blank" href="{{ store.instagram }}" class="instafeed-title"><h3 class="instafeed-user">@{{ instuser }}</h3></a>
+                        <h4 class="sub-title">Siga-nos no Instagram</h4>
+                    </div>
                 </div>
 
                 <div class="col">

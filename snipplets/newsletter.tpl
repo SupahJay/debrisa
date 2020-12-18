@@ -4,8 +4,8 @@
     <section class="section-newsletter-home bg-primary">
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6 text-center">
-                    <div class="js-newsletter newsletter">
+                <div class="col-md-8 col-lg-7 text-center">
+                    <div class="js-newsletter newsletter-new">
                         {% if settings.news_title %}
                             <h3 class="h1 mb-4">{{ settings.news_title }}</h3>
                         {% endif %}
@@ -21,11 +21,13 @@
                             {% endif %}
                         {% endif %}
 
-                        <form class="mt-5" method="post" action="/winnie-pooh" onsubmit="$(this).attr('action', '');">
+                        <form method="post" action="/winnie-pooh" onsubmit="$(this).attr('action', '');">
                             <div class="input-append">
-                              
-                                {% embed "snipplets/forms/form-input.tpl" with{input_for: 'email', type_email: true, input_name: 'email', input_id: 'email', input_placeholder: 'Email' | translate, input_custom_class: "form-control-big", input_aria_label: 'Email' | translate } %}
+                              <div class="newsletter-input-group">
+                                {% embed "snipplets/forms/form-input-new.tpl" with{input_for: 'email', type_email: true, input_name: 'email', input_id: 'email', input_placeholder: 'Email' | translate, input_custom_class: "form-control-big", input_aria_label: 'Email' | translate } %}
                                 {% endembed %}
+                                <input type="submit" name="contact" class="btn newsletter-btn" value="{{ "Enviar" | translate }}" />
+                              </div>
 
                             <div class="winnie-pooh" style="display: none;">
                                 <label for="winnie-pooh-newsletter">{{ "No completar este campo" | translate }}</label>
@@ -34,8 +36,6 @@
                             <input type="hidden" name="name" value="{{ "Sin nombre" | translate }}" />
                             <input type="hidden" name="message" value="{{ "Pedido de inscripción a newsletter" | translate }}" />
                             <input type="hidden" name="type" value="newsletter" />
-                            <input type="submit" name="contact" class="btn newsletter-btn" value="{{ "Enviar" | translate }}" />
-                            {% include "snipplets/svg/arrow-right.tpl" with {svg_custom_class: "icon-inline newsletter-btn svg-icon-primary"} %}
                             </div>
                         </form>
                     </div>
