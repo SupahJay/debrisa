@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
 $primary:  #A08C68;
+$secondary: #A08C68;
 
 *, body{
     font-family: 'Poppins', sans-serif;
@@ -12,27 +13,105 @@ $primary:  #A08C68;
 .section-instafeed-home{
     margin: 0;
 }
-footer{
-    background: black;
-    color: white;
+.head-light {
+    .js-search-form{
+        .form-control{
+            color: black;
+            border:0;
+        }
+        .form-group{
+            display: flex;
+            align-items: center;
+        }
+        .search-input-submit{
+            position: relative;
+            top: inherit;
+            right: inherit;
+            display: flex;
+            svg{
+                font-size: 1.5em;
+                fill: black;
+                margin: 0 0 0 5PX;
+            }
+        }
+        .search-input{
+            border-bottom: 1px solid black;
+            border-radius: 0;
+        }
+    }
+    .nav-row{
+        border: 0;
+        margin-top: 20px;
+    }
+}
+.utilities-container{
     margin: 0;
-    h4.h3{
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 21px;
+    .utilities-item{
+        width: inherit;
+        padding: 0;
+        margin: 0 10px;
+        svg{
+            font-size: 1.6em;
+            fill: black;
+        }
     }
-    a{
-        color:white;
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 12px;
-        line-height: 18px;
+}
+.utility-head {
+    span.cart-widget-amount{
+        top: -8px;
+        right: -11px;
     }
-    .footer-social{
-        display: none;    
+}
+.nav-desktop{
+    ul.nav-desktop-list{
+        li.nav-item{
+            padding: 0 30px;
+            a.nav-list-link {
+                color: black;
+                text-transform: uppercase;
+                span svg{
+                    fill: black;
+                }
+            }
+        }
+    }
+}
+.section-featured-home{
+    .h1{
+        text-transform: uppercase;
+    }
+    .js-item-product{
+        .item-price-container{
+            .item-price{
+                color: black;
+            }
+        }
+    }
+    .item-description{
+        border: 0;
+    }
+    .item-actions{
+        .item-buy-open, .js-addtocart{
+            border-radius: 0;
+            background: $secondary;
+            height: 38px;
+        }
+        .btn-secondary{
+            border-radius: 0;
+            border: 1px solid $secondary;
+            color: $secondary;
+            a{
+                color: $secondary;
+                svg{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.section-banners-home{
+    .textbanner-image-background{
+        object-fit: fill;
     }
 }
 .section-newsletter-home.bg-primary{
@@ -115,5 +194,28 @@ footer{
             color: #6B6B6B;
             margin-bottom: 0;
         }
+    }
+}
+footer{
+    background: black;
+    color: white;
+    margin: 0;
+    h4.h3{
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    a{
+        color:white;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .footer-social{
+        display: none;    
     }
 }
