@@ -1,6 +1,11 @@
 <div class="utilities-container">
+	<div class="utilities-item">
+		<div id="ajax-cart" class="utility-head text-center">
+			<img src="{{ 'images/fav.png' | static_url }}" />
+		</div>
+	</div>
 	{% set attention_head = store.whatsapp or store.phone or store.email %}
-	{% if attention_head %}
+	{% if attention_head and false %}
 		<div class="js-utilities-item utilities-item transition-soft d-none d-md-inline-block">
 			<div class="utility-head text-center">
 				{% include "snipplets/svg/chat.tpl" with {svg_custom_class: "icon-inline icon-2x"} %}

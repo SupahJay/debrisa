@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/" lang="{% for language in languages %}{% if language.active %}{{ language.lang }}{% endif %}{% endfor %}">
     <head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
         <link rel="preconnect" href="https://d26lpennugtm8s.cloudfront.net" />
         <link rel="dns-prefetch" href="https://d26lpennugtm8s.cloudfront.net" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

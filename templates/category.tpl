@@ -36,14 +36,7 @@
 				<div class="col-auto align-self-center">
 					{% include "snipplets/breadcrumbs.tpl" %}
 				</div>
-				<div class="visible-when-content-ready col text-right">
-					{% if store.has_filters_multiple_choice %}
-						{% include "snipplets/grid/filters.tpl" with {applied_filters: true} %}
-					{% else %}
-						<div class="js-append-filters" style="display: none;">
-						</div>
-					{% endif %}	
-				</div>
+
 			</div>
 		</div>
 		<div class="visible-when-content-ready col-6 col-md-3 d-md-none">
@@ -78,11 +71,6 @@
 
 		{% endif %}
 		</div>
-		<div class="{% if show_filters %}col-6{% else %}col-8 offset-2 offset-md-0{% endif %} col-md-3">
-			{% if products %}
-				{% include 'snipplets/grid/sort-by.tpl' %}
-			{% endif %}
-		</div> 
 	</div>
 </section>
 
@@ -99,16 +87,21 @@
 <section class="category-body">
 	<div class="container">
 		<div class="row">
-			{% if show_filters %} 
+			{% if show_filters and false %} 
 				<div class="col col-md-2 d-none d-md-block visible-when-content-ready">
 					{% if products %}
 						{% include "snipplets/grid/categories.tpl" %}
-						{% if has_filters %}	   
+						{% if has_filters %} a  
 							{% include "snipplets/grid/filters.tpl" %}
 						{% endif %}
 					{% endif %}
 				</div>
 			{% endif %}
+
+			<div class="col-12">
+				<h1 class="h2 h1-md ">{{ category.name }}</h1>
+			</div>
+
 			<div class="col" data-store="category-grid-{{ category.id }}">
 				{% if products %}
 					<div class="js-product-table row">
