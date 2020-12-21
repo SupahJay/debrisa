@@ -16,18 +16,13 @@
     {% set show_topbar =  has_ad_bar or has_social_network or has_languages %}
     {% if show_topbar %}
         <section class="js-topbar section-topbar {% if not has_ad_bar %}d-none d-md-block{% endif %}">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
                     <div class="col text-left d-none d-md-block">
-                        <ul class="js-subutility-list subutility-list">
-                            {% if store.whatsapp %}
-                                <li class="subutility-list-item"><a href="{{ store.whatsapp }}" class="contact-link">{% include "snipplets/svg/whatsapp.tpl" with {svg_custom_class: "icon-inline icon-md mr-1"} %} {{ store.whatsapp |trim('https://wa.me/') }}</a></li>
-                            {% elseif store.phone %}
-                                <li class="subutility-list-item"><a href="tel:{{ store.phone }}" class="contact-link">{% include "snipplets/svg/phone.tpl" with {svg_custom_class: "icon-inline icon-md mr-1"} %} {{ store.phone }}</a></li>
-                            {% endif %}
-                            {% if store.email %}
-                                <li class="subutility-list-item"><a href="mailto:{{ store.email }}" class="contact-link">{% include "snipplets/svg/email.tpl" with {svg_custom_class: "icon-inline icon-md mr-1"} %} {{ store.email }}</a></li>
-                            {% endif %}
+                        <ul class="d-none">
+                            <li><i class="fas fa-phone"></i>(49) 3622 8305</li>
+                            <li><i class="fas fa-envelope"></i>atendimento@debrisa.com.br</li>
+                            <li><i class="fas fa-globe"></i>worldwide</li>
                         </ul>
                         {% include "snipplets/navigation/navigation-lang.tpl" %}
                     </div>
@@ -41,7 +36,7 @@
             </div>
         </section>
     {% endif %}
-	<div class="container-fluid {% if settings.head_utility == 'searchbox' %}pb-3 pb-md-0{% endif %}">
+	<div class="container {% if settings.head_utility == 'searchbox' %}pb-3 pb-md-0{% endif %}">
 		<div class="{% if not settings.head_fix %}js-nav-logo-bar{% endif %} row no-gutters align-items-center">
             <div class="col-2 text-left d-block d-md-none">
                {% if settings.head_utility == 'searchbox' %}
@@ -72,6 +67,8 @@
                 {% include "snipplets/notification.tpl" with {add_to_cart: true, add_to_cart_mobile: true} %}
             </div>
         {% endif %}
+	</div>
+
         <div class="row align-items-center nav-row {% if settings.head_utility == 'searchbox' %}d-none d-md-block{% endif %}">
             {% if settings.head_utility == 'categories' %}
             <div class="col-2 d-block d-md-none p-0 text-center">
@@ -86,7 +83,6 @@
             <div class="col text-center p-0 d-none d-md-block">{% snipplet "navigation/navigation.tpl" %}</div>
         </div>
 
-	</div>    
     {% include "snipplets/notification.tpl" with {order_notification: true} %}
 </header>
 
