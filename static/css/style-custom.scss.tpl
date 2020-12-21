@@ -2,6 +2,7 @@
 
 $primary:  #A08C68;
 $secondary: #A08C68;
+$main-green: #4E6548;
 
 *, body{
     font-family: 'Poppins', sans-serif;
@@ -64,6 +65,7 @@ $secondary: #A08C68;
 }
 .nav-desktop{
     ul.nav-desktop-list{
+        border-bottom: 2px solid $main-green;
         li.nav-item{
             padding: 0 30px;
             a.nav-list-link {
@@ -90,6 +92,9 @@ $secondary: #A08C68;
     .item-description{
         border: 0;
     }
+    .item-product:hover .item-description {
+        border-bottom: 0;
+    }
     .item-actions{
         .item-buy-open, .js-addtocart{
             border-radius: 0;
@@ -100,11 +105,38 @@ $secondary: #A08C68;
             border-radius: 0;
             border: 1px solid $secondary;
             color: $secondary;
-            a{
-                color: $secondary;
-                svg{
-                    display: none;
-                }
+            .svg-icon-primary{
+                display: none;
+            }
+        }
+    }
+}
+.js-product-table{
+    .item-description{
+        border: 0;
+    }
+    .item-price-container{
+        .item-price{
+            color: black;
+        }
+    }
+    .item-product:hover {
+        .item-description{
+            border: 0;
+        }
+    }
+    .item-actions{
+        .item-buy-open, .js-addtocart{
+            border-radius: 0;
+            background: $secondary;
+            height: 38px;
+        }
+        .btn-secondary{
+            border-radius: 0;
+            border: 1px solid $secondary;
+            color: $secondary;
+            .svg-icon-primary{
+                display: none;
             }
         }
     }
