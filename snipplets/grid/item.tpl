@@ -150,7 +150,7 @@
                     </div>
                 {% endif %}
                 <div class="{% if product.available and product.display_price %}col-4 col-md-6 pl-1{% else %}col-12 col-md-6{% endif %}">
-                    <a href="{{ product.url }}" title="{{ product.name }}" aria-label="{{ product.name }}" class="d-block btn btn-secondary btn-small">{% include "snipplets/svg/eye.tpl" with {svg_custom_class: "icon-inline svg-icon-primary"} %} <span class="{% if product.available and product.display_price %}d-none d-md-inline-block{% endif %}">{{ "Ver" | translate }}</span></a>
+                    <a href="{{ product.url }}" title="{{ product.name }}" aria-label="{{ product.name }}" class="d-block btn btn-secondary btn-small">{% include "snipplets/svg/eye.tpl" with {svg_custom_class: "icon-inline svg-icon-primary"} %} <span class="{% if product.available and product.display_price %}d-none d-md-inline-block{% endif %}">{{ "Olhar" | translate }}</span></a>
                 </div>
             </div>
         {% endif %}

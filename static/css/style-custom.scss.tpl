@@ -10,6 +10,10 @@ $main-green: #4E6548;
 .section-topbar{
     background: $primary;
     color: white;
+    padding: 6px 0;
+    .top-item{
+        font-size: 12px;
+    }
 }
 .section-instafeed-home{
     margin: 0;
@@ -29,10 +33,17 @@ $main-green: #4E6548;
             top: inherit;
             right: inherit;
             display: flex;
+            text-transform: inherit;
+            font-size: 14px;
+            color: black;
             svg{
                 font-size: 1.5em;
                 fill: black;
                 margin: 0 0 0 5PX;
+            }
+            &:hover{
+                color: black;
+                opacity: 1;
             }
         }
         .search-input{
@@ -76,21 +87,52 @@ $main-green: #4E6548;
                 }
             }
         }
+        ul.desktop-list-subitems{
+            display: flex;
+            justify-content: space-between;
+            li.nav-item{
+                .container{
+                    max-width: inherit;
+                    width: inherit;
+                }
+            }
+        }
     }
 }
+.breadcrumbs {
+    .divider{
+        font-size: 16px;
+        opacity: 1;
+    }
+}
+.section-banners-home{
+    margin: 0;
+}
 .section-featured-home{
+    margin: 0 !important;
+    .container{
+        position: relative;
+    }
     .h1{
         text-transform: uppercase;
     }
     .js-item-product{
+        margin: 0;
+        .item-description{
+            border: 0;
+            a{
+                color: rgba(0,0,0,1);
+            }
+            .js-item-name{
+                font-size: 16px;
+                text-transform: lowercase;
+            }
+        }
         .item-price-container{
             .item-price{
                 color: black;
             }
         }
-    }
-    .item-description{
-        border: 0;
     }
     .item-product:hover .item-description {
         border-bottom: 0;
@@ -100,15 +142,25 @@ $main-green: #4E6548;
             border-radius: 0;
             background: $secondary;
             height: 38px;
+            font-size: 14px;
         }
         .btn-secondary{
             border-radius: 0;
             border: 1px solid $secondary;
             color: $secondary;
+            font-size: 14px;
             .svg-icon-primary{
                 display: none;
             }
         }
+    }
+    .swiper-button-prev{
+        left: 0;
+        border: 0;
+    }
+    .swiper-button-next{
+        right: 0;
+        border: 0;
     }
 }
 .js-product-table{
@@ -163,6 +215,12 @@ $main-green: #4E6548;
         font-weight: normal;
         font-size: 16px;
         line-height: 24px;
+    }
+}
+
+.category-body{
+    .title-category{
+        font-weight: normal;
     }
 }
 

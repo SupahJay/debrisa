@@ -30,7 +30,7 @@
 </section>
 <section class="js-category-controls-prev category-controls-sticky-detector"></section>
 <section class="js-category-controls category-controls container visible-when-content-ready">
-	<div class="row align-items-center mb-md-5">
+	<div class="row align-items-center mb-md-4">
 		<div class="col-9 d-none d-md-block">
 			<div class="row">
 				<div class="col-auto align-self-center">
@@ -99,7 +99,7 @@
 			{% endif %}
 
 			<div class="col-12">
-				<h1 class="h2 h1-md ">{{ category.name }}</h1>
+				<h1 class="h2 h1-md m-0 title-category">{{ category.name }}</h1>
 			</div>
 
 			<div class="col" data-store="category-grid-{{ category.id }}">

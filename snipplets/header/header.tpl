@@ -19,18 +19,21 @@
             <div class="container">
                 <div class="row">
                     <div class="col text-left d-none d-md-block">
-                        <ul class="d-none">
-                            <li><i class="fas fa-phone"></i>(49) 3622 8305</li>
-                            <li><i class="fas fa-envelope"></i>atendimento@debrisa.com.br</li>
-                            <li><i class="fas fa-globe"></i>worldwide</li>
-                        </ul>
+                        <div class="d-flex align-middle">
+                            <div class="top-item mr-5"><i class="fas fa-phone mr-2"></i>(49) 3622 8305</div>
+                            <div class="top-item mr-5"><i class="fas fa-envelope mr-2"></i>atendimento@debrisa.com.br</div>
+                            <div class="top-item mr-5"><i class="fas fa-globe mr-2"></i>worldwide</div>
+                        </div>
                         {% include "snipplets/navigation/navigation-lang.tpl" %}
                     </div>
                     {% if has_ad_bar %}
                         {% snipplet "header/header-advertising.tpl" %}
                     {% endif %}
-                    <div class="col text-right d-none d-md-block">
-                        {% include "snipplets/social/social-links.tpl" %}
+                    <div class="col text-right d-none top-social d-flex justify-content-end">
+                        <div class="social-item mr-3"><i class="fab fa-facebook-f"></i></div>
+                        <div class="social-item mr-3"><i class="fab fa-instagram"></i></div>
+                        <div class="social-item mr-2"><i class="fab fa-pinterest-p"></i></div>
+                        {# include "snipplets/social/social-links.tpl" #}
                     </div>
                 </div>
             </div>

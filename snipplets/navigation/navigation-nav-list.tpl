@@ -15,7 +15,9 @@
 	        	</a>
 	        </div>
 	        {% if desktop_nav %}{% if not subitem %}<div class="js-desktop-dropdown desktop-dropdown">{% endif %}{% endif %}
+				<div class="container">
 				<ul class="{% if desktop_nav %}{% if not subitem %}desktop-list-subitems{% endif %}{% else %}js-pages-accordion{% endif %} list-subitems nav-list-accordion" {% if not desktop_nav %}style="display:none;"{% endif %}>
+				
 					{% if not desktop_nav and item.isCategory  %}
 						<li class="nav-item nav-item-desktop">
 				        	<a class="nav-list-link {{ item.current ? 'selected' : '' }}" href="{{ item.url }}"><strong>{{ 'Ver todo en' | translate }} {{ item.name }}</strong></a>
@@ -26,8 +28,8 @@
 			        {% else %}
 						{% include 'snipplets/navigation/navigation-nav-list.tpl' with { 'navigation' : item.subitems, 'subitem' : true  } %}
 			        {% endif %}
-					
 				</ul>
+				</div>
 			{% if desktop_nav %}{% if not subitem %}</div>{% endif %}{% endif %}
 		</li>
 	{% else %}

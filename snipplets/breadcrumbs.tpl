@@ -10,7 +10,7 @@
 {% if breadcrumbs %}
     <div class="breadcrumbs {{ breadcrumbs_custom_class }} {% if template == 'category' %}mb-md-0 text-center text-md-left{% endif %}">
         <a class="crumb" href="{{ store.url }}" title="{{ store.name }}">{{ "Inicio" | translate }}</a>
-        <span class="divider">></span>
+        <span class="divider">•</span>
         {% if template == 'page' %}
             <span class="crumb active">{{ page.name }}</span>
         {% elseif template == 'cart' %}
@@ -25,7 +25,7 @@
                     <span class="crumb active">{{ crumb.name }}</span>
                 {% else %}
                     <a class="crumb" href="{{ crumb.url }}" title="{{ crumb.name }}">{{ crumb.name }}</a>
-    	            <span class="divider">></span>
+    	            <span class="divider">•</span>
                 {% endif %}
             {% endfor %}
         {% endif %}

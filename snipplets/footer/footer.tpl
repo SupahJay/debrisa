@@ -12,7 +12,7 @@
 {% set has_seal_logos = store.afip or ebit or settings.custom_seal_code or ("seal_img.jpg" | has_custom_image) %}
 {% set show_help = not has_products and not has_social_network %}
 <footer class="js-hide-footer-while-scrolling display-when-content-ready" data-store="footer">
-	<div class="container-fluid px-md-5">
+	<div class="container px-md-5">
 		<div class="row element-footer">
 			
 			{% if template != 'password' %}

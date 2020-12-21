@@ -87,9 +87,11 @@
             {% endfor %}
         {% endif %}
     </div>
-</div>
 
-{% if featured_slider or new_slider or sale_slider %}
+    {% if featured_slider or new_slider or sale_slider %}
     <div class="js-swiper-{% if featured_slider %}featured{% elseif new_slider %}new{% else %}sale{% endif %}-prev swiper-button-prev d-none d-md-block svg-circle svg-circle-big svg-icon-text{% if settings.icons_solid %} svg-solid{% endif %}">{% include "snipplets/svg/chevron-left.tpl" with {svg_custom_class: "icon-inline icon-2x mr-1"} %}</div>
     <div class="js-swiper-{% if featured_slider %}featured{% elseif new_slider %}new{% else %}sale{% endif %}-next swiper-button-next d-none d-md-block svg-circle svg-circle-big svg-icon-text{% if settings.icons_solid %} svg-solid{% endif %}">{% include "snipplets/svg/chevron-right.tpl" with {svg_custom_class: "icon-inline icon-2x ml-1"} %}</div>
-{% endif %}
+    {% endif %}
+
+</div>
+
