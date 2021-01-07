@@ -81,7 +81,7 @@ $main-green: #4E6548;
 }
 .nav-desktop{
     ul.nav-desktop-list{
-        border-bottom: 2px solid $main-green;
+        border-bottom: 1px solid $main-green;
         li.nav-item{
             padding: 0 30px;
             a.nav-list-link {
@@ -138,6 +138,22 @@ $main-green: #4E6548;
                 color: black;
             }
         }
+        .labels{
+            .label.label-accent{
+                background: transparent !important;
+                border-radius:0 !important;
+                padding: 0;
+                position: absolute;
+                top: -5px;
+                left: 15px;
+                span{
+                    position: absolute;
+                    top: 8px;
+                    left: 12px;
+                    font-weight: 500;
+                }
+            }
+        }
     }
     .item-product:hover .item-description {
         border-bottom: 0;
@@ -154,6 +170,7 @@ $main-green: #4E6548;
             border: 1px solid $secondary;
             color: $secondary;
             font-size: 14px;
+            height: 38px;
             .svg-icon-primary{
                 display: none;
             }
@@ -192,6 +209,7 @@ $main-green: #4E6548;
             border-radius: 0;
             border: 1px solid $secondary;
             color: $secondary;
+            height: 38px;
             .svg-icon-primary{
                 display: none;
             }
@@ -201,6 +219,12 @@ $main-green: #4E6548;
 .section-banners-home{
     .textbanner-image-background{
         object-fit: fill;
+    }
+    .textbanner-image{
+        transition: transform .2s; /* Animation */
+        &:hover{
+            transform: scale(1.03);
+        }
     }
 }
 .section-newsletter-home.bg-primary{
@@ -220,6 +244,23 @@ $main-green: #4E6548;
         font-weight: normal;
         font-size: 16px;
         line-height: 24px;
+    }
+}
+
+.labels{
+    .label.label-accent{
+        background: transparent !important;
+        border-radius:0 !important;
+        padding: 0;
+        position: absolute;
+        top: -5px;
+        left: 15px;
+        span{
+            position: absolute;
+            top: 8px;
+            left: 12px;
+            font-weight: 500;
+        }
     }
 }
 
@@ -264,6 +305,7 @@ $main-green: #4E6548;
 .section-instafeed-home{
     text-align: center;
     line-height: 0;
+    margin: 2px 0;
     .insta-titles {
         height: 100%;
         display: flex;
@@ -291,6 +333,69 @@ $main-green: #4E6548;
         }
     }
 }
+.section-products-related{
+    .item-description{
+        .item-name{
+            font-size: 16px;
+            text-transform: lowercase;
+        }
+        .item-price-container{
+            .item-price{
+                color: black;
+            }
+        }
+    }
+    .item-actions{
+        .js-addtocart, .item-buy-open{
+            border-radius: 0;
+            background: $secondary;
+            height: 38px;
+        }
+        .btn-secondary{
+            border-radius: 0;
+            border: 1px solid $secondary;
+            color: $secondary;
+            height: 38px;
+            .svg-icon-primary{
+                display: none;
+            }
+        }
+    }
+    .swiper-button-prev, .swiper-button-next{
+        border: 0;
+    }
+}
+.section-single-product{
+    .price-container{
+        .js-price-display{
+            color: black;
+        }
+    }
+    .svg-icon-accent{
+        fill: black;
+    }
+    .text-accent{
+        color: black;
+    }
+    a#btn-installments{
+        color: black;
+    }
+    .form-quantity{
+        height: 44px;
+    }
+    .js-prod-submit-form{
+        background: black;
+        border-radius: 0;
+    }
+    .product-description{
+        h2{
+            display: none;
+        }
+    }
+}
+.card-img, .alert, .form-control, .form-select, .form-quantity, .modal, .btn-default, .box-rounded-small, .box{
+    border-radius: 0;
+}
 footer{
     background: black;
     color: white;
@@ -310,7 +415,18 @@ footer{
         font-size: 12px;
         line-height: 18px;
     }
+    .contact-info{
+        .contact-item{
+            padding: 0;
+            a{
+                color: white;
+            }
+        }
+    }
     .footer-social{
         display: none;    
+    }
+    .footer-lega{
+        background: #181818;
     }
 }
