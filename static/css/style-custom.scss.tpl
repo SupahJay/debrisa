@@ -15,6 +15,11 @@ $main-green: #4E6548;
         font-size: 12px;
     }
 }
+.utilities-container{
+    .subutility-list {
+        top: 40px;
+    }
+}
 .section-instafeed-home{
     margin: 0;
 }
