@@ -334,6 +334,11 @@ $main-green: #4E6548;
     }
 }
 .section-products-related{
+    h3.h1{
+        font-size: 28px;
+        margin:0 0 20px;
+        font-weight:400;
+    }
     .item-description{
         .item-name{
             font-size: 16px;
@@ -366,6 +371,12 @@ $main-green: #4E6548;
     }
 }
 .section-single-product{
+    .breadcrumbs {
+        text-align: left;
+    }
+    .page-header{
+        margin: 0 0 15px;
+    }
     .price-container{
         .js-price-display{
             color: black;
@@ -383,6 +394,11 @@ $main-green: #4E6548;
     .form-quantity{
         height: 44px;
     }
+    .js-product-name{
+        text-align: left;
+        font-size: 26px;
+        font-weight: 400;
+    }
     .js-prod-submit-form{
         background: black;
         border-radius: 0;
@@ -396,6 +412,17 @@ $main-green: #4E6548;
 .card-img, .alert, .form-control, .form-select, .form-quantity, .modal, .btn-default, .box-rounded-small, .box{
     border-radius: 0;
 }
+.banner-innterna{
+    margin: 0 0 20px;
+    position: relative;
+    top: -30px;
+}
+.page-header{
+    h2{
+        text-align: left;
+    }
+}
+
 footer{
     background: black;
     color: white;
@@ -406,6 +433,7 @@ footer{
         font-weight: 500;
         font-size: 14px;
         line-height: 21px;
+        text-transform: uppercase;
     }
     a{
         color:white;
@@ -414,9 +442,13 @@ footer{
         font-weight: normal;
         font-size: 12px;
         line-height: 18px;
+        &:hover{
+            color: white;
+        }
     }
     .contact-info{
         .contact-item{
+            font-size: 12px;
             padding: 0;
             a{
                 color: white;
