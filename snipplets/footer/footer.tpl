@@ -61,7 +61,7 @@
 
 				{# Contact info #}
 				{% if has_footer_contact_info %}
-					<div class="col-md mb-4">
+					<div class="col col-md mb-4">
 						{% if settings.footer_contact_title %}
 							<h4 class="h3">{{ settings.footer_contact_title }}</h4>
 						{% endif %}
